@@ -1,0 +1,17 @@
+{
+  "content": "Hello",
+  "size": 25,
+  "color": 0,
+  "bold": false,
+  "font": "SimHei",
+  "zIndex": 50,
+  "relative": 800,
+  "duration": 1000,
+  "location": [0.2, 0.8],
+  "animations": [
+    {
+      "duration": 1000,
+      "location": [0.8, 0.2]
+    }
+  ]
+}
