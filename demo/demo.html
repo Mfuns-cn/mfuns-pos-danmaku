@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="./demo.css" />
+    <meta charset="UTF-8" />
     <title>弹幕播放测试</title>
   </head>
   <body>
@@ -13,16 +14,16 @@
       <button onclick="engine.pause()">暂停</button>
       <button onclick="engine.reset()">重置</button>
       <button onclick="engine.seek(seekTime.value)">跳转</button>
-      <input type="number" id="seekTime" value=0 />
+      <input type="number" id="seekTime" value="0" />
       <span id="time">time</span>
     </div>
   </body>
-  <script src="../lib/mfunsM7Engine.js"></script>
+  <script src="../lib/mfunsLocationDanmaku.js"></script>
   <script>
     let danmakuList = [];
     let time = document.getElementById("time");
     let seekTime = document.getElementById("seekTime");
-    let engine = new M7Engine({
+    let engine = new mfunsLocationDanmaku({
       container: document.getElementById("container"),
       getDanmaku: (send) => {
         return danmakuList;
@@ -35,7 +36,7 @@
       if (xhr.readyState == 4 && xhr.status == 200) {
         danmakuList = JSON.parse(xhr.responseText);
       }
-      engine.reload()
+      engine.reload();
     };
     xhr.send();
 

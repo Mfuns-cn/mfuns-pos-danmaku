@@ -1,5 +1,5 @@
 import { DanmakuData } from "src/Danmaku/DanmakuData";
-import { M7Data } from "src/Danmaku/M7Data";
+import { LDData } from "src/Danmaku/LDData";
 
 /** 动画渲染器 */
 export class AnimationRenderer {
@@ -22,7 +22,7 @@ export class AnimationRenderer {
     let rotation: [number, number, number] = danmaku.rotation || [0, 0, 0];
     let scale: [number, number] = danmaku.scale || [1, 1];
     // 添加初始属性
-    stylesheet.innerText += `.m7-danmaku-item-${dan.rid} { transform: ${this.getCssTransform(location, rotation, scale)} }`;
+    stylesheet.innerText += `.location-danmaku-item-${dan.rid} { transform: ${this.getCssTransform(location, rotation, scale)} }`;
     // 添加css动画帧属性
     danmaku.animations?.forEach((k, i) => {
       if (k.location) location = k.location;
@@ -33,7 +33,7 @@ export class AnimationRenderer {
     // 添加一个空的停留帧
     stylesheet.innerText += `@keyframes ${aniId}-E { }`;
     // 添加动画属性
-    stylesheet.innerText += `.m7-danmaku-item-${dan.rid} { animation: ${this.getCssAnimation(dan)}; animation-delay: ${this.getCssAnimationDelay(dan.danmaku)}; animation-fill-mode: forwards; }`;
+    stylesheet.innerText += `.location-danmaku-item-${dan.rid} { animation: ${this.getCssAnimation(dan)}; animation-delay: ${this.getCssAnimationDelay(dan.danmaku)}; animation-fill-mode: forwards; }`;
     return stylesheet;
   }
   /** 获取transform属性值 */
@@ -64,7 +64,7 @@ export class AnimationRenderer {
   }
   /** 获取animation-delay属性值 */
   public getCssAnimationDelay(
-    danmaku: M7Data,
+    danmaku: LDData,
     offset: number = 0    // 延迟时间
   ): string{
     let delay = 0;

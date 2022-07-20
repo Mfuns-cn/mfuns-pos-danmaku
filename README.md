@@ -1,4 +1,4 @@
-# mfuns-m7engine
+# mfuns-location-danmaku
  
 ### 参数接收格式
 ``` json
@@ -11,7 +11,7 @@
   ...
 ]
 ```
-### MFUNS-M7弹幕格式
+### MFUNS定位弹幕格式
 ``` json
 {
   "content": "",        // 弹幕内容

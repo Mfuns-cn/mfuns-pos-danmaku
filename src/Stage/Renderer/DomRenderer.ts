@@ -13,7 +13,7 @@ export class DomRenderer {
 
     // 创建容器元素
     let container = document.createElement("div");
-    container.classList.add("m7-danmaku-item", `m7-danmaku-item-${dan.rid}`);
+    container.classList.add("location-danmaku-item", `location-danmaku-item-${dan.rid}`);
     container.setAttribute("data-id", String(dan.id))
     container.setAttribute("r-id", dan.rid)
     container.style.position = "absolute";
@@ -22,7 +22,7 @@ export class DomRenderer {
 
     // 创建内容元素
     let content = document.createElement("div");
-    content.classList.add("m7-danmaku-item-content");
+    content.classList.add("location-danmaku-item-content");
     content.innerHTML = danmaku.content
     content.style.whiteSpace = "pre";
     content.style.transform = danmaku.anchor ? `translate(${-danmaku.anchor[0]*100}%, ${-danmaku.anchor[1]*100}%)` : "";

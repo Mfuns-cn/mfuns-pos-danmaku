@@ -7,9 +7,9 @@ import { LongSegLine } from "./LongSegLine";
 /** 弹幕时间轴 */
 
 export class Timeline {
-  /** 列表 */
+  /** 短段时间轴 */
   public shortSegLine: ShortSegLine;
-  /** 列表 */
+  /** 长段时间轴 */
   public longSegLine: LongSegLine;
 
   constructor() {

@@ -1,8 +1,10 @@
-import { M7Data } from "./M7Data"
+import { LDData } from "./LDData"
+
+/** 用于弹幕引擎的弹幕数据格式 */
 
 export interface DanmakuData {
   /** 高级弹幕本体 */
-  danmaku: M7Data
+  danmaku: LDData
   /** 弹幕id, 具有唯一性 */
   id: number|string|null
   /** 渲染id, 具有随机性和唯一性, 用于弹幕标识和渲染 */

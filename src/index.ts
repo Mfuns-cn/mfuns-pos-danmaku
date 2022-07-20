@@ -2,7 +2,7 @@ import { Controller } from "./Controller";
 import { InitConfigInterface } from "./InitConfigInterface";
 import { DanmakuInterface } from "./Danmaku/DanmakuInterface";
 
-export class M7Engine{
+export class mfunsLocationDanmaku{
   /** 弹幕获取函数, 弹幕引擎通过调用该函数拉取弹幕 */
   public getDanmaku: () => DanmakuInterface[];
   /** 控制器 */
@@ -95,7 +95,7 @@ export class M7Engine{
 
 // 添加进全局
 if (typeof globalThis !== "undefined") {
-  globalThis.M7Engine = M7Engine;
+  globalThis.mfunsLocationDanmaku = mfunsLocationDanmaku;
 } else {
-  window["M7Engine"] = M7Engine;
+  window["mfunsLocationDanmaku"] = mfunsLocationDanmaku;
 }

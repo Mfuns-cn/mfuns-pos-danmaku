@@ -1,4 +1,6 @@
-export interface M7Data {
+/** 解析后的定位弹幕信息格式 */
+
+export interface LDData {
   /** 弹幕内容 */
   content: string;
   /** 弹幕字号 */

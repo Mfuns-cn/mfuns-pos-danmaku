@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="./test.css" />
     <title>弹幕编辑测试</title>
+    <meta charset="UTF-8" />
   </head>
   <body>
     <div id="editor"></div>
@@ -23,10 +24,10 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/ace/1.7.1/ace.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/ace/1.7.1/mode-json.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/ace/1.7.1/worker-json.js"></script>
-  <script src="../lib/mfunsM7Engine.js"></script>
+  <script src="../lib/mfunsLocationDanmaku.js"></script>
   <script>
     let time = document.getElementById("time");
-    let engine = new M7Engine({
+    let engine = new mfunsLocationDanmaku({
       container: document.getElementById("container"),
     });
     engine.play()
