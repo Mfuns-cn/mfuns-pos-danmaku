@@ -1,5 +1,5 @@
-import { DanmakuData } from "src/Danmaku/DanmakuData";
-import { LDData } from "src/Danmaku/LDData";
+import { DanmakuData } from "../../Danmaku/DanmakuData";
+import { LDData } from "../../Danmaku/LDData";
 
 /** 动画渲染器 */
 export class AnimationRenderer {

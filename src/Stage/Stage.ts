@@ -1,4 +1,4 @@
-import { DanmakuData } from "src/Danmaku/DanmakuData";
+import { DanmakuData } from "../Danmaku/DanmakuData";
 import { Renderer } from "./Renderer/Renderer";
 
 /**

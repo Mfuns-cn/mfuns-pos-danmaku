@@ -1,5 +1,5 @@
 import { Timeline } from "./Timeline";
-import { DanmakuData } from "src/Danmaku/DanmakuData";
+import { DanmakuData } from "../Danmaku/DanmakuData";
 
 /**
  * 时间轴驱动器

@@ -1,4 +1,4 @@
-import { DanmakuData } from "src/Danmaku/DanmakuData"
+import { DanmakuData } from "../Danmaku/DanmakuData"
 
 /**
  * 短段时间轴

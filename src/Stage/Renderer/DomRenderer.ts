@@ -1,5 +1,5 @@
-import { DanmakuData } from "src/Danmaku/DanmakuData";
-import numberToColor from "src/utils/numberToColor";
+import { DanmakuData } from "../../Danmaku/DanmakuData";
+import numberToColor from "../../utils/numberToColor";
 
 /** Dom渲染器, 用于创建弹幕DOM元素 */
 export class DomRenderer {

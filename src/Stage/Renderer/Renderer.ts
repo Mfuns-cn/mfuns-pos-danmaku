@@ -1,6 +1,6 @@
 import { DomRenderer } from "./DomRenderer";
 import { AnimationRenderer } from "./AnimationRenderer";
-import { DanmakuData } from "src/Danmaku/DanmakuData";
+import { DanmakuData } from "../../Danmaku/DanmakuData";
 
 export class Renderer {
   /** Dom渲染器, 用于创建弹幕DOM元素 */

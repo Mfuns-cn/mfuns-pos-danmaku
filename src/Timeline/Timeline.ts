@@ -1,6 +1,4 @@
-// import EventEmitter from "src/utils/EventEmitter"
-// import { Controller } from "src/Controller"
-import { DanmakuData } from "src/Danmaku/DanmakuData";
+import { DanmakuData } from "../Danmaku/DanmakuData";
 import { ShortSegLine } from "./ShortSegLine";
 import { LongSegLine } from "./LongSegLine";
 
