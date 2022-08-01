@@ -76,10 +76,8 @@ let advancedDanmaku = new MfunsLocationDanmaku(
   "color": 16777215,    // 弹幕颜色(Hex字符串/Hex转十进制)
   "bold": false,        // 粗体
   "font": "SimHei",     // 字体
-  "effects": {          // 效果(可选)
-    "shadow": [16777215, 0, 0, 0],  // 阴影 [颜色, x, y, 模糊]
-    "stroke": [16777215, 1],        // 描边 [颜色, 描边宽度]
-  },
+  "shadow": [16777215, 0, 0, 0],  // 阴影(可选) [颜色, x, y, 模糊]
+  "stroke": [16777215, 1],        // 描边(可选) [颜色, 描边宽度]
   "start": 0,           // 弹幕开始时间
   "zIndex": 50,         // 弹幕层级
   "anchor": [0, 0],     // 锚点

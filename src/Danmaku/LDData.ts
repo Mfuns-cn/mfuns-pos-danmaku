@@ -11,13 +11,10 @@ export interface LDData {
   bold?: boolean | (0 | 1);
   /** 字体 */
   font?: string;
-  /** 效果 */
-  effects?: {
     /** 阴影 */
-    shadow?: [number | string, number, number, number?];
-    /** 描边 */
-    stroke?: [number | string, number];
-  }
+  shadow?: [number | string, number, number, number?];
+  /** 描边 */
+  stroke?: [number | string, number];
   /** 描边 */
   start?: number;
   /** 弹幕层级 */

@@ -32,8 +32,8 @@ export class DomRenderer {
     content.style.color = this.getColorString(danmaku.color)
     content.style.fontWeight = danmaku.bold ? "700" : "400";
     content.style.fontFamily = danmaku.font || "SimHei";
-    content.style.textShadow = danmaku.effects?.shadow ? `${this.setRelativeSize(danmaku.effects.shadow[1], danmaku.relative)}px ${this.setRelativeSize(danmaku.effects.shadow[2], danmaku.relative)}px ${this.setRelativeSize(danmaku.effects.shadow[3], danmaku.relative)}px ${this.getColorString(danmaku.effects.shadow[0])} ` : ""
-    content.style.webkitTextStroke = danmaku.effects?.stroke ? `${this.setRelativeSize(danmaku.effects.stroke[1], danmaku.relative)}px ${this.getColorString(danmaku.effects.stroke[0])}` : ""
+    content.style.textShadow = danmaku.shadow ? `${this.setRelativeSize(danmaku.shadow[1], danmaku.relative)}px ${this.setRelativeSize(danmaku.shadow[2], danmaku.relative)}px ${this.setRelativeSize(danmaku.shadow[3], danmaku.relative)}px ${this.getColorString(danmaku.shadow[0])} ` : ""
+    content.style.webkitTextStroke = danmaku.stroke ? `${this.setRelativeSize(danmaku.stroke[1], danmaku.relative)}px ${this.getColorString(danmaku.stroke[0])}` : ""
 
     container.appendChild(content)
     return container
