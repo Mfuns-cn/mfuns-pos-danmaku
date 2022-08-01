@@ -1,6 +1,6 @@
 {
   "name": "mfuns-location-danmaku",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mfuns定位弹幕引擎",
   "main": "dist/index.js",
   "types": "src/index.ts",
