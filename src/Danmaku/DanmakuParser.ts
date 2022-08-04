@@ -1,7 +1,7 @@
 import randomHash from "../utils/randomHash";
 import { DanmakuData } from "./DanmakuData";
 import { DanmakuInterface } from "./DanmakuInterface";
-import { LDData } from "./LDData";
+import { PosData } from "./PosData";
 
 /**
  * 弹幕转换器
@@ -13,7 +13,7 @@ export class DanmakuParser {
   public parse(d: DanmakuInterface): DanmakuData | undefined {
     /** 转换单条弹幕 */
     try {
-      let danmaku: LDData = JSON.parse(d.content);
+      let danmaku: PosData = JSON.parse(d.content);
       console.log(danmaku)
       let id: number | string | null = d.id || null;
       let rid: string = randomHash(8);
@@ -34,7 +34,7 @@ export class DanmakuParser {
     }
   }
   /** 获得一条弹幕的持续时间 */
-  public getDuration(danmaku: LDData) {
+  public getDuration(danmaku: PosData) {
     let duration = danmaku.duration || 0;
     danmaku.animations?.forEach((k) => {
       duration += k.duration || 0;

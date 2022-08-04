@@ -1,22 +1,22 @@
 [
   {
     "id": 1658221851179,
-    "content": "{\r\n  \"content\": \"Hello\",\r\n  \"size\": 25,\r\n  \"color\": 0,\r\n  \"start\": 2000,\r\n  \"bold\": false,\r\n  \"font\": \"SimHei\",\r\n  \"zIndex\": 50,\r\n  \"relative\": 800,\r\n  \"duration\": 1000,\r\n  \"location\": [0.2, 0.8],\r\n  \"animations\": [\r\n    {\r\n      \"duration\": 1000,\r\n      \"location\": [0.8, 0.2]\r\n    }\r\n  ]\r\n}",
+    "content": "{\r\n  \"content\": \"Hello\",\r\n  \"size\": 25,\r\n  \"color\": 0,\r\n  \"start\": 2000,\r\n  \"bold\": false,\r\n  \"font\": \"SimHei\",\r\n  \"zIndex\": 50,\r\n  \"relative\": 800,\r\n  \"duration\": 1000,\r\n  \"position\": [0.2, 0.8],\r\n  \"animations\": [\r\n    {\r\n      \"duration\": 1000,\r\n      \"position\": [0.8, 0.2]\r\n    }\r\n  ]\r\n}",
     "time": 2000
   },
   {
     "id": 1658223438100,
-    "content": "{\r\n  \"content\": \"23333\",\r\n  \"size\": 25,\r\n  \"color\": 0,\r\n  \"bold\": false,\r\n  \"font\": \"SimHei\",\r\n  \"zIndex\": 50,\r\n  \"relative\": 800,\r\n  \"duration\": 300,\r\n  \"location\": [0.2, 0.8],\r\n  \"rotation\": [0, 0, 0],\r\n  \"anchor\": [0.5, 0.5],\r\n  \"animations\": [\r\n    {\r\n      \"duration\": 1000\r\n    },\r\n    {\r\n      \"duration\": 5000,\r\n      \"location\": [0.8, 0.2],\r\n      \"rotation\": [0, 0, 360]\r\n    },\r\n    {\r\n      \"duration\": 2000,\r\n      \"rotation\": [290, 180, 360]\r\n    },\r\n    {\r\n      \"duration\": 5000,\r\n      \"location\": [0.2, 0.2]\r\n    }\r\n  ]\r\n}",
+    "content": "{\r\n  \"content\": \"23333\",\r\n  \"size\": 25,\r\n  \"color\": 0,\r\n  \"bold\": false,\r\n  \"font\": \"SimHei\",\r\n  \"zIndex\": 50,\r\n  \"relative\": 800,\r\n  \"duration\": 300,\r\n  \"position\": [0.2, 0.8],\r\n  \"rotation\": [0, 0, 0],\r\n  \"anchor\": [0.5, 0.5],\r\n  \"animations\": [\r\n    {\r\n      \"duration\": 1000\r\n    },\r\n    {\r\n      \"duration\": 5000,\r\n      \"position\": [0.8, 0.2],\r\n      \"rotation\": [0, 0, 360]\r\n    },\r\n    {\r\n      \"duration\": 2000,\r\n      \"rotation\": [290, 180, 360]\r\n    },\r\n    {\r\n      \"duration\": 5000,\r\n      \"position\": [0.2, 0.2]\r\n    }\r\n  ]\r\n}",
     "time": 0
   },
   {
     "id": 1658228835105,
-    "content": "{\r\n  \"content\": \"TEST\",\r\n  \"size\": 36,\r\n  \"start\": 100,\r\n  \"color\": \"#FFFFFF\",\r\n  \"bold\": false,\r\n  \"font\": \"SimHei\",\r\n  \"zIndex\": 50,\r\n  \"relative\": 800,\r\n  \"duration\": 1000,\r\n  \"anchor\": [0.5, 0.5],\r\n  \"location\": [0.2, 0.2],\r\n  \"stroke\": [\"#000000\", 0.5],\r\n  \"animations\": [\r\n    {\r\n      \"duration\": 1000,\r\n      \"location\": [0.5, 0.5],\r\n      \"scale\": [2, 2],\r\n      \"ease\": 2\r\n    },\r\n    {\r\n      \"duration\": 1000,\r\n      \"location\": [0.8, 0.8],\r\n      \"scale\": [1, 1],\r\n      \"ease\": 1\r\n    }\r\n  ]\r\n}",
+    "content": "{\r\n  \"content\": \"TEST\",\r\n  \"size\": 36,\r\n  \"start\": 100,\r\n  \"color\": \"#FFFFFF\",\r\n  \"bold\": false,\r\n  \"font\": \"SimHei\",\r\n  \"zIndex\": 50,\r\n  \"relative\": 800,\r\n  \"duration\": 1000,\r\n  \"anchor\": [0.5, 0.5],\r\n  \"position\": [0.2, 0.2],\r\n  \"stroke\": [\"#000000\", 0.5],\r\n  \"animations\": [\r\n    {\r\n      \"duration\": 1000,\r\n      \"position\": [0.5, 0.5],\r\n      \"scale\": [2, 2],\r\n      \"ease\": 2\r\n    },\r\n    {\r\n      \"duration\": 1000,\r\n      \"position\": [0.8, 0.8],\r\n      \"scale\": [1, 1],\r\n      \"ease\": 1\r\n    }\r\n  ]\r\n}",
     "time": 100
   },
   {
     "id": 1658229121113,
-    "content": "{\r\n  \"content\": \"好耶\",\r\n  \"size\": 36,\r\n  \"color\": \"red\",\r\n  \"bold\": true,\r\n  \"font\": \"SimHei\",\r\n  \"zIndex\": 50,\r\n  \"relative\": 800,\r\n  \"duration\": 1000,\r\n  \"anchor\": [0.5, 0.5],\r\n  \"location\": [-0.1, 0.5],\r\n  \"animations\": [\r\n    {\r\n      \"duration\": 2000,\r\n      \"location\": [1.1, 0.5]\r\n    }\r\n  ]\r\n}",
+    "content": "{\r\n  \"content\": \"好耶\",\r\n  \"size\": 36,\r\n  \"color\": \"red\",\r\n  \"bold\": true,\r\n  \"font\": \"SimHei\",\r\n  \"zIndex\": 50,\r\n  \"relative\": 800,\r\n  \"duration\": 1000,\r\n  \"anchor\": [0.5, 0.5],\r\n  \"position\": [-0.1, 0.5],\r\n  \"animations\": [\r\n    {\r\n      \"duration\": 2000,\r\n      \"position\": [1.1, 0.5]\r\n    }\r\n  ]\r\n}",
     "time": 2072
   }
 ]

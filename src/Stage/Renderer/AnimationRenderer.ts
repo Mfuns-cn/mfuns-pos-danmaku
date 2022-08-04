@@ -1,5 +1,5 @@
 import { DanmakuData } from "../../Danmaku/DanmakuData";
-import { LDData } from "../../Danmaku/LDData";
+import { PosData } from "../../Danmaku/PosData";
 
 /** 动画渲染器 */
 export class AnimationRenderer {
@@ -18,31 +18,31 @@ export class AnimationRenderer {
     let danmaku = dan.danmaku
     let stylesheet = document.createElement("style");
     let aniId: string = "danmaku-A-" + dan.rid;
-    let location: [number, number, number?] = danmaku.location || [0, 0, 0];
+    let position: [number, number, number?] = danmaku.position || [0, 0, 0];
     let rotation: [number, number, number] = danmaku.rotation || [0, 0, 0];
     let scale: [number, number] = danmaku.scale || [1, 1];
     // 添加初始属性
-    stylesheet.innerText += `.location-danmaku-item-${dan.rid} { transform: ${this.getCssTransform(location, rotation, scale)} }`;
+    stylesheet.innerText += `.pos-danmaku-item-${dan.rid} { transform: ${this.getCssTransform(position, rotation, scale)} }`;
     // 添加css动画帧属性
     danmaku.animations?.forEach((k, i) => {
-      if (k.location) location = k.location;
+      if (k.position) position = k.position;
       if (k.rotation) rotation = k.rotation;
       if (k.scale) scale = k.scale;
-      stylesheet.innerText += `@keyframes ${aniId}-${i + 1} { to { transform: ${this.getCssTransform(location, rotation, scale)} } }`;
+      stylesheet.innerText += `@keyframes ${aniId}-${i + 1} { to { transform: ${this.getCssTransform(position, rotation, scale)} } }`;
     });
     // 添加一个空的停留帧
     stylesheet.innerText += `@keyframes ${aniId}-E { }`;
     // 添加动画属性
-    stylesheet.innerText += `.location-danmaku-item-${dan.rid} { animation: ${this.getCssAnimation(dan)}; animation-delay: ${this.getCssAnimationDelay(dan.danmaku)}; animation-fill-mode: forwards; }`;
+    stylesheet.innerText += `.pos-danmaku-item-${dan.rid} { animation: ${this.getCssAnimation(dan)}; animation-delay: ${this.getCssAnimationDelay(dan.danmaku)}; animation-fill-mode: forwards; }`;
     return stylesheet;
   }
   /** 获取transform属性值 */
   public getCssTransform(
-    location: [number, number, number?],
+    position: [number, number, number?],
     rotation: [number, number, number],
     scale: [number, number]
   ): string {
-    let css_translate = `translate3d(${location[0] * this.stageSize[0]}px, ${location[1] * this.stageSize[1]}px, 0)`;
+    let css_translate = `translate3d(${position[0] * this.stageSize[0]}px, ${position[1] * this.stageSize[1]}px, 0)`;
     let css_rotateX = `rotateX(${rotation[0]}deg)`;
     let css_rotateY = `rotateY(${rotation[1]}deg)`;
     let css_rotateZ = `rotateZ(${rotation[2]}deg)`;
@@ -64,7 +64,7 @@ export class AnimationRenderer {
   }
   /** 获取animation-delay属性值 */
   public getCssAnimationDelay(
-    danmaku: LDData,
+    danmaku: PosData,
     offset: number = 0    // 延迟时间
   ): string{
     let delay = 0;

@@ -30,7 +30,7 @@ export class Stage {
     this.getTime = getTime
     // 创建舞台
     this.el = document.createElement("div")
-    this.el.classList.add("location-danmaku-stage")
+    this.el.classList.add("pos-danmaku-stage")
     this.el.style.width = this.size[0] + "px"
     this.el.style.height = this.size[1] + "px"
     this.el.style.position = "absolute"
@@ -42,9 +42,9 @@ export class Stage {
     this.resize()
     
     this.stylesheet = document.createElement("style")
-    this.stylesheet.innerText += ".location-danmaku-stage.paused .location-danmaku-item { animation-play-state: paused }"
-    this.stylesheet.innerText += ".location-danmaku-item.location-danmaku-invisible { visibility: hidden }"
-    this.stylesheet.innerText += ".location-danmaku-item-content { -webkit-text-size-adjust: none; text-size-adjust: none}"
+    this.stylesheet.innerText += ".pos-danmaku-stage.paused .pos-danmaku-item { animation-play-state: paused }"
+    this.stylesheet.innerText += ".pos-danmaku-item.pos-danmaku-invisible { visibility: hidden }"
+    this.stylesheet.innerText += ".pos-danmaku-item-content { -webkit-text-size-adjust: none; text-size-adjust: none}"
     this.container.appendChild(this.stylesheet)
 
     this.renderer = new Renderer(this.size)
@@ -64,9 +64,9 @@ export class Stage {
       // 获得一条完整的弹幕
       let danmakuElement = this.renderer.render(dan)
       // 添加开始前隐藏机制
-      danmakuElement.classList.add("location-danmaku-invisible")
+      danmakuElement.classList.add("pos-danmaku-invisible")
       danmakuElement.addEventListener("animationstart", ()=>{
-        danmakuElement.classList.remove("location-danmaku-invisible");
+        danmakuElement.classList.remove("pos-danmaku-invisible");
       }, {once: true})
       // 添加结束后销毁机制
       danmakuElement.addEventListener("animationend", (e)=>{
@@ -94,7 +94,7 @@ export class Stage {
   }
   /** 根据rid删除弹幕元素 */
   public remove_rid(rid: string) {
-    let element = this.el.querySelector(`.location-danmaku-item-${rid}`)
+    let element = this.el.querySelector(`.pos-danmaku-item-${rid}`)
     element && this.el.removeChild(element)
   }
   /** 清屏 */

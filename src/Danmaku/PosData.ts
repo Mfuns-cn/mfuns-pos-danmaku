@@ -1,6 +1,6 @@
 /** 解析后的定位弹幕信息格式 */
 
-export interface LDData {
+export interface PosData {
   /** 弹幕内容 */
   content: string;
   /** 弹幕字号 */
@@ -26,7 +26,7 @@ export interface LDData {
   /** 存活时间 */
   duration?: number;
   /** 位置 */
-  location?: [number, number];
+  position?: [number, number];
   /** 旋转 */
   rotation?: [number, number, number];
   /** 尺寸 */
@@ -36,7 +36,7 @@ export interface LDData {
     /** 运动时间 */
     duration?: number;
     /** 位置 */
-    location?: [number, number];
+    position?: [number, number];
     /** 旋转 */
     rotation?: [number, number, number];
     /** 尺寸 */

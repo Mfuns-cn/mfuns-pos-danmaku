@@ -2,7 +2,7 @@ import { Controller } from "./Controller";
 import { InitConfigInterface } from "./InitConfigInterface";
 import { DanmakuInterface } from "./Danmaku/DanmakuInterface";
 
-export class MfunsLocationDanmaku{
+export class MfunsPosDanmaku{
   /** 弹幕获取函数, 弹幕引擎通过调用该函数拉取弹幕 */
   public getDanmaku: () => DanmakuInterface[];
   /** 控制器 */
@@ -95,7 +95,7 @@ export class MfunsLocationDanmaku{
 
 // 添加进全局
 if (typeof globalThis !== "undefined") {
-  globalThis.MfunsLocationDanmaku = MfunsLocationDanmaku;
+  globalThis.MfunsPosDanmaku = MfunsPosDanmaku;
 } else {
-  window["MfunsLocationDanmaku"] = MfunsLocationDanmaku;
+  window["MfunsPosDanmaku"] = MfunsPosDanmaku;
 }

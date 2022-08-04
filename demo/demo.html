@@ -18,12 +18,12 @@
       <span id="time">time</span>
     </div>
   </body>
-  <script src="../lib/mfunsLocationDanmaku.js"></script>
+  <script src="../lib/mfunsPosDanmaku.js"></script>
   <script>
     let danmakuList = [];
     let time = document.getElementById("time");
     let seekTime = document.getElementById("seekTime");
-    let engine = new MfunsLocationDanmaku({
+    let engine = new MfunsPosDanmaku({
       container: document.getElementById("container"),
       getDanmaku: (send) => {
         return danmakuList;

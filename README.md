@@ -1,20 +1,20 @@
-# mfuns-location-danmaku
+# mfuns-pos-danmaku
 
 ## 下载 & 安装
 ### 标签导入
-下载 lib/mfunsLocationDanmaku.js 文件，使用 script 标记导入到 html 中
+下载 lib/mfunsPosDanmaku.js 文件，使用 script 标记导入到 html 中
 
 ### 使用 npm 安装
 ```
-npm i mfuns-location-danmaku
+npm i mfuns-pos-danmaku
 ```
 导入方式
 ```javascript
-import { MfunsLocationDanmaku } from "mfuns-location-danmaku";
+import { MfunsPosDanmaku } from "mfuns-pos-danmaku";
 ```
 实例化
 ```javascript
-let advancedDanmaku = new MfunsLocationDanmaku(
+let advancedDanmaku = new MfunsPosDanmaku(
   container: document.getElementById("advanced-danmaku"),
   // 拉取弹幕列表
   getDanmaku: () => {
@@ -83,13 +83,13 @@ let advancedDanmaku = new MfunsLocationDanmaku(
   "anchor": [0, 0],     // 锚点
   "relative": 800,      // 相对宽度
   "duration": 1000,     // 存活时间
-  "location": [0, 0],   // 位置 [x, y]
+  "position": [0, 0],   // 位置 [x, y]
   "rotation": [0, 0, 0],// 角度 [x, y, z] (可选, 若不选则不做变换)
   "scale": [0, 0],      // 大小 [x, y] (可选, 若不选则不做变换)
   "animations": [       // 动画
     {
       "duration": 1000,     // 运动时间
-      "location": [0, 0],   // 位置 [x, y] (与舞台宽高的比值)
+      "position": [0, 0],   // 位置 [x, y] (与舞台宽高的比值)
       "rotation": [0, 0, 0],// 角度 [x, y, z] (可选, 若不选则不做变换)
       "scale": [1, 1],      // 大小 [x, y] (可选, 若不选则不做变换)
       "ease": 0             // 速度曲线 (0=线性 1=加速 2=减速 3=缓入缓出)
