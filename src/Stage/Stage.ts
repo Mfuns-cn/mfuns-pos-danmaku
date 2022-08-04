@@ -23,7 +23,6 @@ export class Stage {
   public renderer: Renderer;
   constructor({ container, size, perspective, getTime }: { container: HTMLElement; size?: [number, number]; perspective?: number; getTime: () => number; }) {
     this.container = container
-    this.container.style.position = "relative"
     this.size = size || [1920, 1080];
     this.perspective = perspective || this.size[0]
     this.scale = 1

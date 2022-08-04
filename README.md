@@ -15,6 +15,7 @@ import { MfunsPosDanmaku } from "mfuns-pos-danmaku";
 实例化
 ```javascript
 let advancedDanmaku = new MfunsPosDanmaku(
+  // 挂载的DOM容器, 其css样式的position属性须设置为relative/absolute
   container: document.getElementById("advanced-danmaku"),
   // 拉取弹幕列表
   getDanmaku: () => {
