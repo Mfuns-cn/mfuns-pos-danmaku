@@ -22,7 +22,9 @@ let advancedDanmaku = new MfunsPosDanmaku(
     return ([{...}, {...}])
   },
   // 舞台基本尺寸, 可选
-  stageSize: [1920, 1080]
+  stageSize: [1920, 1080],
+  // 窗口大小变化时自动调整舞台大小, 默认值为true
+  autoResize: true,
 );
 ```
 

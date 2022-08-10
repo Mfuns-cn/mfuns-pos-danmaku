@@ -7,6 +7,7 @@ export class MfunsPosDanmaku{
   public getDanmaku: () => DanmakuInterface[];
   /** 控制器 */
   public controller: Controller;
+  protected autoResize: Boolean;
   constructor(config: InitConfigInterface) {
     this.controller = new Controller({
       stageSize: config.stageSize || [1920, 1080],
@@ -14,13 +15,16 @@ export class MfunsPosDanmaku{
     });
     this.getDanmaku = config.getDanmaku || (() => {return []})
     // 添加弹幕
+    this.autoResize = config.autoResize == undefined ? true : config.autoResize
     if (config.getDanmaku) {
       this.controller.loadDanmaku(this.getDanmaku())
     }
-    // 监听大小变化
-    window.addEventListener("resize", () => {
-      this.controller.stage.resize()
-    });
+    if (this.autoResize) {
+      // 监听大小变化
+      window.addEventListener("resize", () => {
+        this.controller.stage.resize()
+      });
+    }
   }
 
   /**
