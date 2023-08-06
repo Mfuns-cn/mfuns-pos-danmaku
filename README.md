@@ -1,5 +1,5 @@
 # mfuns-pos-danmaku
-
+此项目已不再活跃，请移至我们的新项目 [mfuns-advanced-danmaku](https://github.com/Mfuns-cn/mfuns-advanced-danmaku)   
 ## 下载 & 安装
 ### 标签导入
 下载 lib/mfunsPosDanmaku.js 文件，使用 script 标记导入到 html 中
